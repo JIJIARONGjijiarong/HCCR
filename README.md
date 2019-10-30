@@ -20,21 +20,23 @@
 
 ## 基本结构
 
-### I/O模块
+### I/O模块（opencv）
+
+- ~~gnt转png模块~~
 
 - 输入模块（input）
 
 - 输出模块（output）
 
-### 预处理模块
+### 预处理模块（opencv）
 
-- 滤波（smoothing）
+- 滤波（smoothing）籍家荣
 
-- 二值化（binaryzation）
+- 二值化（binaryzation）邬洲
 
-- 倾斜校正（tilt_coorrection）
-- 细化（refining）
-- 毛刺消除（remove——burr）
+- 倾斜校正（tilt_coorrection）籍家荣
+- 细化（refining）张炳辰
+- 毛刺消除（remove_burr）周义青
 
 ### 字符分割模块
 
