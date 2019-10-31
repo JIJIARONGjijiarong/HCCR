@@ -20,7 +20,7 @@
 
 - gnt转png模块 周义青
 
-  关于gnt文件格式的说明：
+  [关于gnt文件格式的说明]( http://www.nlpr.ia.ac.cn/databases/handwriting/Download.html )：
 
   - In brief, each file has a header with the header size given as the first 4-byte integer number in the file. The last two integer numbers in the header give the number of samples in the file and the feature dimensionality. Following the header are the records of all samples, each sample including a 2-byte label (GB code) and the feature vector, each dimension in a unsigned char byte. 
   - [gnt文件格式详细说明]( http://www.nlpr.ia.ac.cn/databases/download/feature_data/FileFormat-mpf.pdf )
