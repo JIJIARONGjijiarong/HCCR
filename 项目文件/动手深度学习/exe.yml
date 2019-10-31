@@ -1,0 +1,58 @@
+name: MXNet
+channels:
+  - defaults
+dependencies:
+  - _libgcc_mutex=0.1=main
+  - ca-certificates=2019.5.15=0
+  - certifi=2019.6.16=py37_0
+  - libedit=3.1.20181209=hc058e9b_0
+  - libffi=3.2.1=hd88cf55_4
+  - libgcc-ng=9.1.0=hdf63c60_0
+  - libstdcxx-ng=9.1.0=hdf63c60_0
+  - ncurses=6.1=he6710b0_1
+  - openssl=1.1.1c=h7b6447c_1
+  - pip=19.1.1=py37_0
+  - python=3.7.3=h0371630_0
+  - readline=7.0=h7b6447c_5
+  - setuptools=41.0.1=py37_0
+  - sqlite=3.29.0=h7b6447c_0
+  - tk=8.6.8=hbc83047_0
+  - wheel=0.33.4=py37_0
+  - xz=5.2.4=h14c3975_4
+  - zlib=1.2.11=h7b6447c_3
+  - pip:
+    - backcall==0.1.0
+    - chardet==3.0.4
+    - cycler==0.10.0
+    - decorator==4.4.0
+    - idna==2.8
+    - ipykernel==5.1.1
+    - ipython==7.7.0
+    - ipython-genutils==0.2.0
+    - jedi==0.14.1
+    - jupyter-client==5.3.1
+    - jupyter-core==4.5.0
+    - kiwisolver==1.1.0
+    - matplotlib==3.1.1
+    - mxnet-cu101==1.5.0
+    - numpy==1.16.4
+    - pandas==0.25.0
+    - parso==0.5.1
+    - pexpect==4.7.0
+    - pickleshare==0.7.5
+    - prompt-toolkit==2.0.9
+    - ptyprocess==0.6.0
+    - pygments==2.4.2
+    - pyparsing==2.4.1.1
+    - python-dateutil==2.8.0
+    - python-graphviz==0.8.4
+    - pytz==2019.1
+    - pyzmq==18.0.2
+    - requests==2.22.0
+    - six==1.12.0
+    - tornado==6.0.3
+    - traitlets==4.3.2
+    - urllib3==1.25.3
+    - wcwidth==0.1.7
+prefix: /home/jijiarong/anaconda3/envs/MXNet
+
