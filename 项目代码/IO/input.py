@@ -1,68 +1,58 @@
+"""
+input模块
+包括：
+    单幅图像的读取
+    整个目录下图像的读取
+    整个数据集的读取
+"""
 import os
+import cv2
 import numpy as np
-import struct
-from PIL import Image
-
-data_dir = 'E:\Git\HCCR\data'
-# train_data_dir = "../data/HWDB1.1trn_gnt"
-strain_data_dir = o.path.join(dPata_dir, 'HWDB1.1trn_gnt_1')
-test_data_dir = os.path.join(data_dir, 'HWDB1.1tst_gnt')
 
 
-def read_from_gnt_dir(gnt_dir=train_data_dir):
-    def one_file(f):
-        header_size = 10
-        while True:
-            header = np.fromfile(f, dtype='uint8', count=header_size)
-            if not header.size: break
-            sample_size = header[0] + (header[1] << 8) + (header[2] << 16) + (header[3] << 24)
-            tagcode = header[5] + (header[4] << 8)
-            width = header[6] + (header[7] << 8)
-            height = header[8] + (header[9] << 8)
-            if header_size + width * height != sample_size:
-                break
-            image = np.fromfile(f, dtype='uint8', count=width * height).reshape((height, width))
-            yield image, tagcode
-
-    for file_name in os.listdir(gnt_dir):
-        if file_name.endswith('.gnt'):
-            file_path = os.path.join(gnt_dir, file_name)
-            with open(file_path, 'rb') as f:
-                for image, tagcode in one_file(f):
-                    yield image, tagcode
+def load_img(file_path: str):
+    """
+    图像读取函数
+    :param file_path: 文件路径
+    :return: 读取的图像
+    """
+    img = cv2.imread(file_path)
+    img = cv2.resize(img, (32, 32), cv2.INTER_LINEAR)
+    return img
 
 
-char_set = set()
-for _, tagcode in read_from_gnt_dir(gnt_dir=train_data_dir):
-    tagcode_unicode = struct.pack('>H', tagcode).decode('gb2312')
-    char_set.add(tagcode_unicode)
-char_list = list(char_set)
-char_dict = dict(zip(sorted(char_list), range(len(char_list))))
-print(len(char_dict))
-print("char_dict=", char_dict)
+def load_dir(dir_path: str, data: list, target):
+    """
+    目录读取函数
+    :param dir_path: 目录路径
+    :param data: 数据
+    :param target: 类别
+    """
+    file_list = os.listdir(dir_path)
+    os.chdir(dir_path)
+    tar = dir_path.split(os.altsep)[-1]
 
-import pickle
+    for img in file_list:
+        data.append(load_img(img))
+        target.append(tar)
 
-f = open('char_dict', 'wb')
-pickle.dump(char_dict, f)
-f.close()
-train_counter = 0
-test_counter = 0
-for image, tagcode in read_from_gnt_dir(gnt_dir=train_data_dir):
-    tagcode_unicode = struct.pack('>H', tagcode).decode('gb2312')
-    im = Image.fromarray(image)
-    dir_name = 'E:\Git\HCCR\data' + '%0.5d' % char_dict[tagcode_unicode]
-    if not os.path.exists(dir_name):
-        os.mkdir(dir_name)
-    im.convert('RGB').save(dir_name + '/' + str(train_counter) + '.png')
-    print("train_counter=", train_counter)
-    train_counter += 1
-for image, tagcode in read_from_gnt_dir(gnt_dir=test_data_dir):
-    tagcode_unicode = struct.pack('>H', tagcode).decode('gb2312')
-    im = Image.fromarray(image)
-    dir_name = '' + '%0.5d' % char_dict[tagcode_unicode]
-    if not os.path.exists(dir_name):
-        os.mkdir(dir_name)
-    im.convert('RGB').save(dir_name + '/' + str(test_counter) + '.png')
-    print("test_counter=", test_counter)
-    test_counter += 1
+
+def load_data(data_path):
+    """
+    数据读取函数
+    :param data_path: 数据路径
+    :return: 读取的数据，图像的类别
+    """
+    data_dir = os.listdir(data_path)
+    os.chdir(data_path)
+    data = []
+    target = []
+    for dir_path in data_dir:
+        load_dir(dir_path, data, target)
+        os.chdir(data_path)
+
+    return np.array(data), np.array(target)
+
+
+if __name__ == "__main__":
+    dataSet, targets = load_data("H:/图片")
