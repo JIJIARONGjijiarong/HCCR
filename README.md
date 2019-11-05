@@ -18,26 +18,26 @@
 
 ### I/O模块（opencv）
 
-- gnt转png模块 周义青
+- gnt转png模块 周义青finish
 
   [关于gnt文件格式的说明]( http://www.nlpr.ia.ac.cn/databases/handwriting/Download.html )：
 
   - In brief, each file has a header with the header size given as the first 4-byte integer number in the file. The last two integer numbers in the header give the number of samples in the file and the feature dimensionality. Following the header are the records of all samples, each sample including a 2-byte label (GB code) and the feature vector, each dimension in a unsigned char byte. 
   - [gnt文件格式详细说明]( http://www.nlpr.ia.ac.cn/databases/download/feature_data/FileFormat-mpf.pdf )
 
-- 输入模块（input）籍家荣
+- 输入模块（input）籍家荣 finish
 
-- 输出模块（output）籍家荣
+- 输出模块（output）籍家荣 finish
 
 ### 预处理模块（opencv）
 
-- 图片放缩（周义青）
-- 滤波降噪（smoothing）籍家荣
+- 图片放缩（周义青）finish
+- 滤波降噪（smoothing）籍家荣 
 - 彩色图像转灰度图像（邬洲）
 - 灰度图像二值化使用 OTSU（binaryzation）邬洲
-- 倾斜校正（tilt_coorrection）籍家荣
-- 细化（refining）张炳辰
-- 毛刺消除（remove_burr）周义青
+- 倾斜校正（tilt_coorrection）籍家荣 finish
+- 细化（refining）张炳辰finish
+- 毛刺消除（remove_burr）周义青defeat
 
 #### 字符分割模块 暂未确定人选情况
 
@@ -51,19 +51,19 @@
 - CNN
 - LSTM
 - SAE
-- DBM
+- DBM 
 
 集成学习
 
 ## 计划
 
-### 第一阶段（第一周：10.28----11.3）
+### 第一阶段（第一周：10.28——11.3）
 
 - 完成预处理模块
 - 模型的学习
 - 预处理模块的测试
 
-### 第二阶段（第二、三周）
+### 第二阶段（第二、三周）（11.4——11.17）
 
 - 预处理模块的BUG修复
 - 模型的学习
