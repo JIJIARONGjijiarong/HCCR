@@ -1,6 +1,3 @@
-import cv2
-
-
 def VThin(image, array):
     '''
     :param image:二值化处理好的图像

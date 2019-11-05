@@ -62,6 +62,9 @@
       <module name="项目代码" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/IO" />
       <option name="IS_MODULE_SDK" value="true" />
@@ -123,6 +126,7 @@
       <workItem from="1572689387201" duration="6000" />
       <workItem from="1572690603494" duration="2034000" />
       <workItem from="1572693138185" duration="2729000" />
+      <workItem from="1572918387964" duration="35000" />
     </task>
     <servers />
   </component>

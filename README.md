@@ -34,7 +34,7 @@
 - 图片放缩（周义青）finish
 - 滤波降噪（smoothing）籍家荣 
 - 彩色图像转灰度图像（邬洲）
-- 灰度图像二值化使用 OTSU（binaryzation）邬洲
+- 灰度图像二值化 使用 OTSU（binaryzation）邬洲
 - 倾斜校正（tilt_coorrection）籍家荣 finish
 - 细化（refining）张炳辰finish
 - 毛刺消除（remove_burr）周义青defeat
