@@ -31,10 +31,14 @@
 
 ### 预处理模块（opencv）
 
+关于预处理的一点想法：
+
+现阶段所作的预处理工作都是基于图像的预处理，是否有办法进行基于**文本图像**的预处理工作。
+
 - 图片放缩（周义青）finish
 - 滤波降噪（smoothing）籍家荣 
-- 彩色图像转灰度图像（邬洲）
-- 灰度图像二值化 使用 OTSU（binaryzation）邬洲
+- 彩色图像转灰度图像（邬洲）finish
+- 灰度图像二值化 使用 OTSU（binaryzation）邬洲finish
 - 倾斜校正（tilt_coorrection）籍家荣 finish
 - 细化（refining）张炳辰finish
 - 毛刺消除（remove_burr）周义青defeat
