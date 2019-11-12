@@ -163,7 +163,23 @@
       <workItem from="1573518564550" duration="659000" />
       <workItem from="1573523227329" duration="58000" />
       <workItem from="1573526072446" duration="1114000" />
+      <workItem from="1573527207242" duration="249000" />
     </task>
+    <task id="LOCAL-00001" summary="goolenet">
+      <created>1573527397230</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1573527397230</updated>
+    </task>
+    <task id="LOCAL-00002" summary="goolenet">
+      <created>1573527448128</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1573527448128</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -181,6 +197,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="goolenet" />
+    <option name="LAST_COMMIT_MESSAGE" value="goolenet" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/$input.coverage" NAME="input Coverage Results" MODIFIED="1572693224743" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/IO" />
