@@ -3,6 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="44cb127b-5d10-4104-8a74-4ca5b41ed9d1" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model/googlenet.py" beforeDir="false" afterPath="$PROJECT_DIR$/Model/googlenet.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log.pth" beforeDir="false" afterPath="$PROJECT_DIR$/log.pth" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/module_user.py" beforeDir="false" afterPath="$PROJECT_DIR$/module_user.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -33,6 +36,7 @@
   <component name="PropertiesComponent">
     <property name="TODO_SCOPE" value="All Places" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="H:/file" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -40,6 +44,11 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\Git\HCCR\项目代码" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -53,7 +62,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.googlenet">
+  <component name="RunManager" selected="Python.module_user">
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
       <module name="项目代码" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -68,6 +77,28 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="googlenet (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="项目代码" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="H:/file" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="H:/file/googlenet.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="true" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -98,7 +129,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="input" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="module_user" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="项目代码" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -106,12 +137,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/IO" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/IO/input.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/module_user.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="true" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -120,7 +151,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="read" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="vgg" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="项目代码" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -128,12 +159,34 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/IO" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Model" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/IO/read.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Model/vgg.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="vgg_" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="项目代码" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Model" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="E:\Git\HCCR\项目代码\Model\vgg.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="true" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -144,9 +197,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.module_user" />
         <item itemvalue="Python.googlenet" />
-        <item itemvalue="Python.input" />
-        <item itemvalue="Python.read" />
+        <item itemvalue="Python.vgg" />
+        <item itemvalue="Python.vgg_" />
+        <item itemvalue="Python.googlenet (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -175,6 +230,30 @@
       <workItem from="1573523227329" duration="58000" />
       <workItem from="1573526072446" duration="1114000" />
       <workItem from="1573527207242" duration="803000" />
+      <workItem from="1573787664681" duration="39000" />
+      <workItem from="1573867290112" duration="415000" />
+      <workItem from="1573953408624" duration="366000" />
+      <workItem from="1574420304977" duration="707000" />
+      <workItem from="1574424110842" duration="13000" />
+      <workItem from="1574424945595" duration="662000" />
+      <workItem from="1574427471258" duration="257000" />
+      <workItem from="1574429548014" duration="51000" />
+      <workItem from="1574429647054" duration="11000" />
+      <workItem from="1574646612169" duration="828000" />
+      <workItem from="1574647469107" duration="8022000" />
+      <workItem from="1574658526241" duration="16000" />
+      <workItem from="1574674739233" duration="130000" />
+      <workItem from="1574730256290" duration="3111000" />
+      <workItem from="1574735196342" duration="15490000" />
+      <workItem from="1574756089158" duration="2861000" />
+      <workItem from="1574769365833" duration="974000" />
+      <workItem from="1574770543555" duration="4088000" />
+      <workItem from="1574774655391" duration="2503000" />
+      <workItem from="1574813300377" duration="9773000" />
+      <workItem from="1574834704896" duration="7683000" />
+      <workItem from="1574843648450" duration="251000" />
+      <workItem from="1574844149222" duration="5848000" />
+      <workItem from="1574905585039" duration="1572000" />
     </task>
     <task id="LOCAL-00001" summary="goolenet">
       <created>1573527397230</created>
@@ -197,7 +276,56 @@
       <option name="project" value="LOCAL" />
       <updated>1573527675034</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="goolenet">
+      <created>1574750152485</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1574750152485</updated>
+    </task>
+    <task id="LOCAL-00005" summary="goolenet">
+      <created>1574756173793</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1574756173793</updated>
+    </task>
+    <task id="LOCAL-00006" summary="goolenet">
+      <created>1574758020894</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1574758020894</updated>
+    </task>
+    <task id="LOCAL-00007" summary="goolenet">
+      <created>1574773134133</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1574773134133</updated>
+    </task>
+    <task id="LOCAL-00008" summary="goolenet">
+      <created>1574774201770</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1574774201770</updated>
+    </task>
+    <task id="LOCAL-00009" summary="goolenet">
+      <created>1574775077367</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1574775077367</updated>
+    </task>
+    <task id="LOCAL-00010" summary="goolenet">
+      <created>1574776605095</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1574776605095</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -268,5 +396,6 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/$input.coverage" NAME="input Coverage Results" MODIFIED="1572693224743" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/IO" />
+    <SUITE FILE_PATH="coverage/$googlenet.coverage" NAME="googlenet Coverage Results" MODIFIED="1574749942409" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Model" />
   </component>
 </project>
