@@ -16,7 +16,7 @@ parse.add_argument('--root', type=str, default='E:\Git\HCCR\data', help='path to
 # 模式，3选1
 parse.add_argument('--mode', type=str, default='train', choices=['train', 'validataion', 'inference'])
 # checkpoint 路径
-parse.add_argument('--log_path', type=str, default=os.path.abspath('.') + '/log.pth', help='dir of checkpoints')
+parse.add_argument('--log_path', type=str, default=os.path.abspath('.') + 'E:\Git\HCCR\data\log\ShuffleNet.pth', help='dir of checkpoints')
 
 parse.add_argument('--restore', type=bool, default=False, help='whether to restore checkpoints')
 

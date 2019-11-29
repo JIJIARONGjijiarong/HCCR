@@ -2,10 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="44cb127b-5d10-4104-8a74-4ca5b41ed9d1" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Model/googlenet.py" beforeDir="false" afterPath="$PROJECT_DIR$/Model/googlenet.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/log.pth" beforeDir="false" afterPath="$PROJECT_DIR$/log.pth" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/module_user.py" beforeDir="false" afterPath="$PROJECT_DIR$/module_user.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/module_user.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/Nov27_18-30-24_DESKTOP-A4MKRMN0/events.out.tfevents.1574850624.DESKTOP-A4MKRMN" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/Nov27_18-44-19_DESKTOP-A4MKRMN1/events.out.tfevents.1574851459.DESKTOP-A4MKRMN" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/Nov27_18-57-48_DESKTOP-A4MKRMN2/events.out.tfevents.1574852268.DESKTOP-A4MKRMN" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/torchvation.py" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -254,6 +255,7 @@
       <workItem from="1574843648450" duration="251000" />
       <workItem from="1574844149222" duration="5848000" />
       <workItem from="1574905585039" duration="1572000" />
+      <workItem from="1574996976582" duration="8000" />
     </task>
     <task id="LOCAL-00001" summary="goolenet">
       <created>1573527397230</created>
