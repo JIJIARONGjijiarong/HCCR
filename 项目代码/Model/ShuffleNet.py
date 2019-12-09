@@ -135,10 +135,10 @@ def train(overal_situation_writer):
             running_loss += loss.item()
             end = int(time.time())
             train_writer.add_scalar("loss", loss, global_step=i, walltime=end - start)
-        #     sys.stdout.write(
-        #         "time %5ds,epoch: %5d,batch: %5d,loss: %f  \r" % (end - start, epoch, i, running_loss))
-        #     sys.stdout.flush()
-        # print('Save checkpoint:%5d,loss: %f,used time %5d' % (epoch, running_loss, end - start))
+            sys.stdout.write(
+                "time %5ds,epoch: %5d,batch: %5d,loss: %f  \r" % (end - start, epoch, i, running_loss))
+            sys.stdout.flush()
+        print('Save checkpoint:%5d,loss: %f,used time %5d' % (epoch, running_loss, end - start))
         torch.save({'epoch': epoch,
                     'model_state_dict': model.state_dict(),
                     'optimizer_state_dict': optimizer.state_dict(),
@@ -177,11 +177,11 @@ def validation(overal_situation_writer, writer):
             total += labels.size(0)
             correct += sum(predict == labels).item()
             writer.add_scalar("Accuracy", correct / total, global_step=i)
-    #         if i % 10 == 0:
-    #             sys.stdout.write(
-    #                 "batch: %5d,acc: %f                         \r" % (i, correct / total))
-    #             sys.stdout.flush()
-    # print('Accuracy: %.2f%%' % (correct / total * 100))
+            if i % 10 == 0:
+                sys.stdout.write(
+                    "batch: %5d,acc: %f                         \r" % (i, correct / total))
+                sys.stdout.flush()
+    print('Accuracy: %.2f%%' % (correct / total * 100))
     overal_situation_writer.add_scalar("Accuracy",(correct / total * 100))
 
 

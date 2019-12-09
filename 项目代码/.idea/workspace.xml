@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="44cb127b-5d10-4104-8a74-4ca5b41ed9d1" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/module_user.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/runs/Nov27_18-30-24_DESKTOP-A4MKRMN0/events.out.tfevents.1574850624.DESKTOP-A4MKRMN" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/runs/Nov27_18-44-19_DESKTOP-A4MKRMN1/events.out.tfevents.1574851459.DESKTOP-A4MKRMN" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/runs/Nov27_18-57-48_DESKTOP-A4MKRMN2/events.out.tfevents.1574852268.DESKTOP-A4MKRMN" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/torchvation.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model/ShuffleNet.py" beforeDir="false" afterPath="$PROJECT_DIR$/Model/ShuffleNet.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -63,7 +60,26 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.module_user">
+  <component name="RunManager" selected="Python.ShuffleNet">
+    <configuration name="ShuffleNet" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="项目代码" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Model" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Model/ShuffleNet.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
       <module name="项目代码" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -78,28 +94,6 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="true" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="googlenet (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="项目代码" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="H:/file" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="H:/file/googlenet.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="true" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -198,11 +192,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.ShuffleNet" />
         <item itemvalue="Python.module_user" />
         <item itemvalue="Python.googlenet" />
         <item itemvalue="Python.vgg" />
         <item itemvalue="Python.vgg_" />
-        <item itemvalue="Python.googlenet (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -256,6 +250,14 @@
       <workItem from="1574844149222" duration="5848000" />
       <workItem from="1574905585039" duration="1572000" />
       <workItem from="1574996976582" duration="8000" />
+      <workItem from="1575099453093" duration="151000" />
+      <workItem from="1575099635441" duration="34000" />
+      <workItem from="1575113705671" duration="15000" />
+      <workItem from="1575197075568" duration="1745000" />
+      <workItem from="1575202136475" duration="6000" />
+      <workItem from="1575203654503" duration="8000" />
+      <workItem from="1575203724809" duration="5000" />
+      <workItem from="1575856152823" duration="1914000" />
     </task>
     <task id="LOCAL-00001" summary="goolenet">
       <created>1573527397230</created>
