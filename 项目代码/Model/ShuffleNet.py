@@ -214,6 +214,7 @@ def inference(img_path):
     value = get_keys(dic,pred)
 
     print('predict:\t%4d' % pred)
+    print(value)
 
 
 class ShuffleBlock(nn.Module):
