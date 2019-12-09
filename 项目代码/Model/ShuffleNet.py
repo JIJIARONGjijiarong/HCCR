@@ -2,6 +2,7 @@ import argparse  # 提取命令行参数
 import os
 import sys
 import torch
+import pickle
 import torch.nn as nn
 import torch.nn.functional as F
 import torch.optim as optim
@@ -186,6 +187,12 @@ def validation(overal_situation_writer, writer):
 
 
 def inference(img_path):
+    def get_keys(d, value):
+        return [k for k, v in d.items() if v == value]
+
+    dic = pickle.load('')
+    device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
+
     transform = transforms.Compose([
         transforms.Resize((args.image_size, args.image_size)),
         transforms.Grayscale(),
@@ -195,8 +202,16 @@ def inference(img_path):
     input = transform(input)
     input = input.unsqueeze(0)
     model = ShuffleNetG2()
+    model.to(device)
+
+    checkpoint = torch.load(args.log_path)
+    model.load_state_dict(checkpoint['model_state_dict'])
+    model.eval()
+
     output = model(input)
     _, pred = torch.max(output.data, 1)
+
+    value = get_keys(dic,pred)
 
     print('predict:\t%4d' % pred)
 
