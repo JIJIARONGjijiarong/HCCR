@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="44cb127b-5d10-4104-8a74-4ca5b41ed9d1" name="Default Changelist" comment="goolenet">
-      <change afterPath="$PROJECT_DIR$/Main.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/association/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IO/gnt_to_png.py" beforeDir="false" afterPath="$PROJECT_DIR$/IO/gnt_to_png.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Model/associat.py" beforeDir="false" afterPath="$PROJECT_DIR$/association/associat.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Model/googlenet.py" beforeDir="false" afterPath="$PROJECT_DIR$/Model/googlenet.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/train_validation_inference.py" beforeDir="false" afterPath="$PROJECT_DIR$/train_validation_inference.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -273,7 +269,7 @@
       <workItem from="1575856152823" duration="4742000" />
       <workItem from="1575936647143" duration="12406000" />
       <workItem from="1575961902975" duration="3699000" />
-      <workItem from="1575965931428" duration="1841000" />
+      <workItem from="1575965931428" duration="2411000" />
     </task>
     <task id="LOCAL-00001" summary="goolenet">
       <created>1573527397230</created>
@@ -387,7 +383,14 @@
       <option name="project" value="LOCAL" />
       <updated>1575958457058</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="goolenet">
+      <created>1575967820771</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1575967820771</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

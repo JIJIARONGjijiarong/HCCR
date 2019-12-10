@@ -1,13 +1,14 @@
+import argparse  # 提取命令行参数
 import os
+import pickle
 import sys
 import time
+
 import torch
-import pickle
-import argparse  # 提取命令行参数
 import torch.nn as nn
-from PIL import Image
 import torch.optim as optim
 import torchvision.transforms as transforms
+from PIL import Image
 from tensorboardX import SummaryWriter
 from torch.utils.data import DataLoader, Dataset
 
@@ -92,10 +93,10 @@ class MyDataset(Dataset):
 
 def train(model):
     start = int(time.time())
-    transform = transforms.Compose([#transforms.RandomRotation(degrees=30),
-                                    transforms.Resize((args.image_size, args.image_size)),
-                                    transforms.Grayscale(),
-                                    transforms.ToTensor()])
+    transform = transforms.Compose([  # transforms.RandomRotation(degrees=30),
+        transforms.Resize((args.image_size, args.image_size)),
+        transforms.Grayscale(),
+        transforms.ToTensor()])
 
     train_set = MyDataset(args.root + '/train.txt', num_class=args.num_class, transforms=transform)
     print('data size:', train_set.__len__())
@@ -152,10 +153,10 @@ def train(model):
 
 
 def validation(model):
-    transform = transforms.Compose([# transforms.RandomRotation(degrees=30),
-                                    transforms.Resize((args.image_size, args.image_size)),
-                                    transforms.Grayscale(),
-                                    transforms.ToTensor()])
+    transform = transforms.Compose([  # transforms.RandomRotation(degrees=30),
+        transforms.Resize((args.image_size, args.image_size)),
+        transforms.Grayscale(),
+        transforms.ToTensor()])
 
     test_set = MyDataset(args.root + '/test.txt', num_class=args.num_class, transforms=transform)
     test_loader = DataLoader(test_set, batch_size=args.batch_size)
@@ -210,16 +211,18 @@ def inference(model, img_path):
     model.eval()
 
     output = model(input)
+    print(type(output))
     _, pred = torch.max(output.data, 1)
     print(pred)
     value = get_keys(dic, pred)
     print(value)
-    return pred,value
+    return pred, value
 
 
 if __name__ == '__main__':
     from Model import ShuffleNet
-    from Model import googlenet
+
+    # from Model import googlenet
     model = ShuffleNet.ShuffleNetG3()
     # model = googlenet.inception_v3()
     writer = SummaryWriter(comment="overal_situation")
