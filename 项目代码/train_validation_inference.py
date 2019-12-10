@@ -1,14 +1,13 @@
-import argparse  # 提取命令行参数
 import os
-import pickle
 import sys
 import time
-
 import torch
+import pickle
+import argparse  # 提取命令行参数
 import torch.nn as nn
+from PIL import Image
 import torch.optim as optim
 import torchvision.transforms as transforms
-from PIL import Image
 from tensorboardX import SummaryWriter
 from torch.utils.data import DataLoader, Dataset
 
@@ -18,10 +17,10 @@ parse.add_argument('--root', type=str, default='E:\\Git\\HCCR\\data', help='path
 
 parse.add_argument('--mode', type=str, default='train', choices=['train', 'validataion', 'inference'])
 
-parse.add_argument('--log_path', type=str, default=os.path.abspath('.') + "E:\\Git\HCCR\\data\\log\\ShuffleNet.pth",
+parse.add_argument('--log_path', type=str, default="E:\\Git\HCCR\\data\\log\\ShuffleNet.pth",
                    help="dir of checkpoints")
 
-parse.add_argument('--restore', type=bool, default=False, help='whether to restore checkpoints')
+parse.add_argument('--restore', type=bool, default=True, help='whether to restore checkpoints')
 
 parse.add_argument('--batch_size', type=int, default=32, help='size of mini-batch')
 
@@ -29,7 +28,7 @@ parse.add_argument('--image_size', type=int, default=32, help='resize image')
 
 parse.add_argument('--epoch', type=int, default=100)
 
-parse.add_argument('--num_class', type=int, default=3755, choices=range(10, 3755))
+parse.add_argument('--num_class', type=int, default=10, choices=range(10, 3755))
 
 args = parse.parse_args()
 
@@ -93,7 +92,7 @@ class MyDataset(Dataset):
 
 def train(model):
     start = int(time.time())
-    transform = transforms.Compose([transforms.RandomRotation(degrees=30),
+    transform = transforms.Compose([#transforms.RandomRotation(degrees=30),
                                     transforms.Resize((args.image_size, args.image_size)),
                                     transforms.Grayscale(),
                                     transforms.ToTensor()])
@@ -153,7 +152,7 @@ def train(model):
 
 
 def validation(model):
-    transform = transforms.Compose([transforms.RandomRotation(degrees=30),
+    transform = transforms.Compose([# transforms.RandomRotation(degrees=30),
                                     transforms.Resize((args.image_size, args.image_size)),
                                     transforms.Grayscale(),
                                     transforms.ToTensor()])
@@ -190,17 +189,19 @@ def inference(model, img_path):
     def get_keys(d, value):
         return [k for k, v in d.items() if v == value]
 
-    dic = pickle.load('')
+    f = open("E:\\Git\\HCCR\\data\\char_dict.txt", "rb")
+    dic = pickle.load(f)
     device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
-
     transform = transforms.Compose([
         transforms.Resize((args.image_size, args.image_size)),
         transforms.Grayscale(),
-        transforms.ToTensor()])
+        transforms.ToTensor()
+    ])
 
     input = Image.open(img_path).convert('RGB')
     input = transform(input)
     input = input.unsqueeze(0)
+    input = input.to(device)
     model = model
     model.to(device)
 
@@ -210,20 +211,20 @@ def inference(model, img_path):
 
     output = model(input)
     _, pred = torch.max(output.data, 1)
-
+    print(pred)
     value = get_keys(dic, pred)
-
-    print('predict:\t%4d' % pred)
     print(value)
+    return pred,value
 
 
 if __name__ == '__main__':
     from Model import ShuffleNet
-
+    from Model import googlenet
     model = ShuffleNet.ShuffleNetG3()
+    # model = googlenet.inception_v3()
     writer = SummaryWriter(comment="overal_situation")
     classes_txt(args.root + '/train', args.root + '/train.txt', num_class=args.num_class)
-    classes_txt(args.root + '/test', args.root + '/tets.txt', num_class=args.num_class)
+    classes_txt(args.root + '/test', args.root + '/test.txt', num_class=args.num_class)
     if args.mode == 'train':
         train(model)
     elif args.mode == 'validation':

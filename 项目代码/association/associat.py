@@ -47,7 +47,6 @@ def get_top_counts(counts:dict):
     # return result
 
 
-
 def get_lianxiang(temp):
     '''
     获取原始文本的所有汉字的联想词
@@ -94,16 +93,14 @@ def get_lianxiang1(str):
             b.append(item[1])
         # print(a)
         print("为您联想的几个词为：",b)
-        # print("联想结果如下:\n",data[word])
+        num=input("请选择:")
+        num=int(num)
+        print(b[num-1])
+        # print("联想结果如下:\n",data[str])
     else:
         print("无结果")
-        get_lianxiang1()
-
-
-if __name__ == '__main__':
-    temp=""
-    f = open('text.txt')
-    line = f.readline()
-    while line:
-        temp +=line
-    get_lianxiang1()  # 调用获取联想词的函数。，
+temp=""
+f = open('E:\\Git\\HCCR\\项目代码\\association\\text.txt')
+line = f.readline()
+temp=line
+# get_lianxiang1("人")  # 调用获取联想词的函数。

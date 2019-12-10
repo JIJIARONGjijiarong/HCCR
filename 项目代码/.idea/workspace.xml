@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="44cb127b-5d10-4104-8a74-4ca5b41ed9d1" name="Default Changelist" comment="">
+    <list default="true" id="44cb127b-5d10-4104-8a74-4ca5b41ed9d1" name="Default Changelist" comment="goolenet">
+      <change afterPath="$PROJECT_DIR$/Main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/association/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/IO/gnt_to_png.py" beforeDir="false" afterPath="$PROJECT_DIR$/IO/gnt_to_png.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Model/ShuffleNet.py" beforeDir="false" afterPath="$PROJECT_DIR$/Model/ShuffleNet.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Model/runs/Dec09_09-50-15_DESKTOP-A4MKRMNoveral_situation/events.out.tfevents.1575856215.DESKTOP-A4MKRMN" beforeDir="false" afterPath="$PROJECT_DIR$/train_validation_inference.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Model/torchvation.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model/associat.py" beforeDir="false" afterPath="$PROJECT_DIR$/association/associat.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model/googlenet.py" beforeDir="false" afterPath="$PROJECT_DIR$/Model/googlenet.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/train_validation_inference.py" beforeDir="false" afterPath="$PROJECT_DIR$/train_validation_inference.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -44,10 +46,11 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\Git\HCCR\项目代码\association" />
       <recent name="E:\Git\HCCR\项目代码" />
     </key>
   </component>
@@ -63,11 +66,33 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.train_validation_inference">
+  <component name="RunManager" selected="Python.Main">
+    <configuration name="Main" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="项目代码" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="ShuffleNet" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="项目代码" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Model" />
       <option name="IS_MODULE_SDK" value="true" />
@@ -109,6 +134,9 @@
       <module name="项目代码" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/IO" />
       <option name="IS_MODULE_SDK" value="true" />
@@ -128,6 +156,9 @@
       <module name="项目代码" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/IO" />
       <option name="IS_MODULE_SDK" value="true" />
@@ -143,32 +174,13 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="module_user" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="train_validation_inference" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="项目代码" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/module_user.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="true" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="train_validation_inference" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="项目代码" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
@@ -187,17 +199,17 @@
     <list>
       <item itemvalue="Python.board" />
       <item itemvalue="Python.gnt_to_png" />
-      <item itemvalue="Python.module_user" />
       <item itemvalue="Python.ShuffleNet" />
       <item itemvalue="Python.train_validation_inference" />
+      <item itemvalue="Python.Main" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.Main" />
         <item itemvalue="Python.train_validation_inference" />
-        <item itemvalue="Python.ShuffleNet" />
         <item itemvalue="Python.gnt_to_png" />
+        <item itemvalue="Python.ShuffleNet" />
         <item itemvalue="Python.board" />
-        <item itemvalue="Python.module_user" />
       </list>
     </recent_temporary>
   </component>
@@ -259,7 +271,9 @@
       <workItem from="1575203654503" duration="8000" />
       <workItem from="1575203724809" duration="5000" />
       <workItem from="1575856152823" duration="4742000" />
-      <workItem from="1575936647143" duration="9077000" />
+      <workItem from="1575936647143" duration="12406000" />
+      <workItem from="1575961902975" duration="3699000" />
+      <workItem from="1575965931428" duration="1841000" />
     </task>
     <task id="LOCAL-00001" summary="goolenet">
       <created>1573527397230</created>
@@ -366,7 +380,14 @@
       <option name="project" value="LOCAL" />
       <updated>1575943653420</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="goolenet">
+      <created>1575958457058</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1575958457058</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

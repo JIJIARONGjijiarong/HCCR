@@ -45,7 +45,7 @@ print("char_dict=", char_dict)
 
 import pickle
 
-f = open('char_dict', 'wb')
+f = open('char_dict.txt', 'wb')
 pickle.dump(char_dict, f)
 f.close()
 train_counter = 0
