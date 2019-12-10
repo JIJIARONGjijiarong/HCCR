@@ -94,7 +94,8 @@ import time
 
 def train(overal_situation_writer):
     start = int(time.time())
-    transform = transforms.Compose([transforms.Resize((args.image_size, args.image_size)),
+    transform = transforms.Compose([transforms.RandomRotation(degrees=30),
+                                    transforms.Resize((args.image_size, args.image_size)),
                                     transforms.Grayscale(),
                                     transforms.ToTensor()])
 
@@ -154,7 +155,8 @@ def train(overal_situation_writer):
 
 # 将测试图片送入模型进行测试
 def validation(overal_situation_writer, writer):
-    transform = transforms.Compose([transforms.Resize((args.image_size, args.image_size)),
+    transform = transforms.Compose([transforms.RandomRotation(degrees=30),
+                                    transforms.Resize((args.image_size, args.image_size)),
                                     transforms.Grayscale(),
                                     transforms.ToTensor()])
 
