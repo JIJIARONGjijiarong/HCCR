@@ -192,7 +192,6 @@ def inference(model, img_path):
 
     f = open("E:\\Git\\HCCR\\data\\char_dict.txt", "rb")
     dic = pickle.load(f)
-    device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
     transform = transforms.Compose([
         transforms.Resize((args.image_size, args.image_size)),
         transforms.Grayscale(),
@@ -202,19 +201,19 @@ def inference(model, img_path):
     input = Image.open(img_path).convert('RGB')
     input = transform(input)
     input = input.unsqueeze(0)
-    input = input.to(device)
     model = model
-    model.to(device)
 
     checkpoint = torch.load(args.log_path)
     model.load_state_dict(checkpoint['model_state_dict'])
     model.eval()
 
     output = model(input)
-    print(type(output))
-    _, pred = torch.max(output.data, 1)
-    print(pred)
-    value = get_keys(dic, pred)
+    _, pred = output.sort(1, descending=True)
+    pred = list(pred.squeeze().data.numpy())[:10]
+    value = []
+    for i in range(10):
+        value.append(get_keys(dic, pred[i])[0])
+    #print(pred)
     print(value)
     return pred, value
 

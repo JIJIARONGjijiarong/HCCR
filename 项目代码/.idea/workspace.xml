@@ -62,7 +62,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.Main">
+  <component name="RunManager" selected="Python.gnt_to_png">
     <configuration name="Main" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="项目代码" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -152,9 +152,6 @@
       <module name="项目代码" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/IO" />
       <option name="IS_MODULE_SDK" value="true" />
@@ -201,9 +198,9 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.gnt_to_png" />
         <item itemvalue="Python.Main" />
         <item itemvalue="Python.train_validation_inference" />
-        <item itemvalue="Python.gnt_to_png" />
         <item itemvalue="Python.ShuffleNet" />
         <item itemvalue="Python.board" />
       </list>
@@ -269,7 +266,8 @@
       <workItem from="1575856152823" duration="4742000" />
       <workItem from="1575936647143" duration="12406000" />
       <workItem from="1575961902975" duration="3699000" />
-      <workItem from="1575965931428" duration="2411000" />
+      <workItem from="1575965931428" duration="2883000" />
+      <workItem from="1575976240484" duration="3917000" />
     </task>
     <task id="LOCAL-00001" summary="goolenet">
       <created>1573527397230</created>
@@ -390,7 +388,14 @@
       <option name="project" value="LOCAL" />
       <updated>1575967820771</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="goolenet">
+      <created>1575968403166</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1575968403166</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

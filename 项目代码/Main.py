@@ -6,10 +6,9 @@ if __name__ == "__main__":
     from association import associat
     # 导入手写板
     # 手写板保存
-    path = 'E:\Git\HCCR\data\\test\\00000\\3215.png'
+    path = 'E:\Git\HCCR\data\\test\\00004\\46213.png'
     model = ShuffleNet.ShuffleNetG3()
     start = int(time.time())
-    ans_num,ans = tvi.inference(model, img_path=path)
+    pred, value = tvi.inference(model, img_path=path)
     end = int(time.time())
-    print(end - start)
-    associat.get_lianxiang1(ans[0])
+    associat.get_lianxiang1(value[0])
