@@ -67,7 +67,7 @@ def get_lianxiang(temp):
                 pass
     print(data)
 
-def get_lianxiang1(str):
+def associat(str):
     '''
     词联想的函数，输入的参数为输入的词，然后根据词库，按照词频高低，
     输出你想输入的词组，即词联想

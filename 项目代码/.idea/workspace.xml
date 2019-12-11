@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="44cb127b-5d10-4104-8a74-4ca5b41ed9d1" name="Default Changelist" comment="goolenet">
+    <list default="true" id="44cb127b-5d10-4104-8a74-4ca5b41ed9d1" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IO/board.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IO/gnt_to_png.py" beforeDir="false" afterPath="$PROJECT_DIR$/IO/gnt_to_png.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model/ShuffleNet.py" beforeDir="false" afterPath="$PROJECT_DIR$/Model/ShuffleNet.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/association/associat.py" beforeDir="false" afterPath="$PROJECT_DIR$/association/associat.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/train_validation_inference.py" beforeDir="false" afterPath="$PROJECT_DIR$/train_validation_inference.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -46,8 +51,9 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\Git\HCCR\项目代码\association" />
+      <recent name="E:\Git\HCCR\项目代码\IO" />
       <recent name="E:\Git\HCCR\项目代码" />
+      <recent name="E:\Git\HCCR\项目代码\association" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -62,11 +68,14 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.gnt_to_png">
+  <component name="RunManager" selected="Python.Main">
     <configuration name="Main" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="项目代码" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
@@ -126,7 +135,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="board" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="gnt_to_png" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="项目代码" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -139,26 +148,29 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/IO/board.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/IO/gnt_to_png.py" />
       <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
       <option name="REDIRECT_INPUT" value="false" />
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="gnt_to_png" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="项目代码" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/IO" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/IO/gnt_to_png.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/IO/main.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="true" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -190,19 +202,19 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.board" />
       <item itemvalue="Python.gnt_to_png" />
       <item itemvalue="Python.ShuffleNet" />
       <item itemvalue="Python.train_validation_inference" />
       <item itemvalue="Python.Main" />
+      <item itemvalue="Python.main" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.gnt_to_png" />
         <item itemvalue="Python.Main" />
-        <item itemvalue="Python.train_validation_inference" />
+        <item itemvalue="Python.main" />
         <item itemvalue="Python.ShuffleNet" />
-        <item itemvalue="Python.board" />
+        <item itemvalue="Python.train_validation_inference" />
+        <item itemvalue="Python.gnt_to_png" />
       </list>
     </recent_temporary>
   </component>
@@ -267,7 +279,14 @@
       <workItem from="1575936647143" duration="12406000" />
       <workItem from="1575961902975" duration="3699000" />
       <workItem from="1575965931428" duration="2883000" />
-      <workItem from="1575976240484" duration="3917000" />
+      <workItem from="1575976240484" duration="4383000" />
+      <workItem from="1575981335520" duration="515000" />
+      <workItem from="1576024761943" duration="3703000" />
+      <workItem from="1576028978076" duration="2660000" />
+      <workItem from="1576031687415" duration="5191000" />
+      <workItem from="1576045286541" duration="4091000" />
+      <workItem from="1576051174951" duration="471000" />
+      <workItem from="1576052206465" duration="3453000" />
     </task>
     <task id="LOCAL-00001" summary="goolenet">
       <created>1573527397230</created>
@@ -395,7 +414,14 @@
       <option name="project" value="LOCAL" />
       <updated>1575968403166</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="goolenet">
+      <created>1575980879767</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1575980879767</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

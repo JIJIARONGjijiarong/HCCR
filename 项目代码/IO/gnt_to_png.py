@@ -5,10 +5,10 @@ import numpy as np
 from PIL import Image
 
 # data文件夹存放转换后的.png文件
-data_dir = 'E:\Git\HCCR\data'
+data_dir = 'H:\data'
 # 路径为存放数据集解压后的.gnt文件
-train_data_dir = 'E:\Git\HCCR\data\HWDB1.1trn_gnt_P1'
-test_data_dir = 'E:\Git\HCCR\data\HWDB1.1tst_gnt'
+train_data_dir = 'H:\HWDB1.1trn_gnt_P1'
+test_data_dir = 'H:\HWDB1.1tst_gnt'
 
 
 def read_from_gnt_dir(gnt_dir=train_data_dir):
@@ -51,11 +51,10 @@ f.close()
 train_counter = 0
 test_counter = 0
 for image, tagcode in read_from_gnt_dir(gnt_dir=train_data_dir):
-    print("run")
     tagcode_unicode = struct.pack('>H', tagcode).decode('gb2312')
     im = Image.fromarray(image)
     # 路径为data文件夹下的子文件夹，train为存放训练集.png的文件夹
-    dir_name = 'E:\Git\HCCR\data\\train\\' + '%0.5d' % char_dict[tagcode_unicode]
+    dir_name = 'H:\data\\train\\' + '%0.5d' % char_dict[tagcode_unicode]
     if not os.path.exists(dir_name):
         os.mkdir(dir_name)
     im.convert('RGB').save(dir_name + '/' + str(train_counter) + '.png')
@@ -65,7 +64,7 @@ for image, tagcode in read_from_gnt_dir(gnt_dir=test_data_dir):
     tagcode_unicode = struct.pack('>H', tagcode).decode('gb2312')
     im = Image.fromarray(image)
     # 路径为data文件夹下的子文件夹，test为存放测试集.png的文件夹
-    dir_name = 'E:\Git\HCCR\data\\test\\' + '%0.5d' % char_dict[tagcode_unicode]
+    dir_name = 'H:\data\\test\\' + '%0.5d' % char_dict[tagcode_unicode]
     if not os.path.exists(dir_name):
         os.mkdir(dir_name)
     im.convert('RGB').save(dir_name + '/' + str(test_counter) + '.png')

@@ -1,14 +1,25 @@
 import train_validation_inference as tvi
 
 if __name__ == "__main__":
-    import time
     from Model import ShuffleNet
+    from IO import MyHccrWindow
     from association import associat
+    import sys
+    from PyQt5.QtWidgets import QApplication
+    from IO.MyHccrWindow import MyHccrWindow
+
     # 导入手写板
+
+
     # 手写板保存
-    path = 'E:\Git\HCCR\data\\test\\00004\\46213.png'
-    model = ShuffleNet.ShuffleNetG3()
-    start = int(time.time())
-    pred, value = tvi.inference(model, img_path=path)
-    end = int(time.time())
-    associat.get_lianxiang1(value[0])
+    app = QApplication(sys.argv)
+    model = ShuffleNet.ShuffleNetG3
+    MY = MyHccrWindow(model,tvi.inference)
+    MY.show()
+    app.exec_()
+    # pred, value = tvi.inference(model, img_path=path)
+    # va = input("你的输入为：")
+    # if va == "":
+    #     va = 1
+    # print("你选择了：",value[int(va)-1])
+    # associat.associat(value[int(va)-1])
