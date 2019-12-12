@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="44cb127b-5d10-4104-8a74-4ca5b41ed9d1" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IO/board.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/IO/gnt_to_png.py" beforeDir="false" afterPath="$PROJECT_DIR$/IO/gnt_to_png.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Model/ShuffleNet.py" beforeDir="false" afterPath="$PROJECT_DIR$/Model/ShuffleNet.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/association/associat.py" beforeDir="false" afterPath="$PROJECT_DIR$/association/associat.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/train_validation_inference.py" beforeDir="false" afterPath="$PROJECT_DIR$/train_validation_inference.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -68,7 +63,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.Main">
+  <component name="RunManager" selected="Python.train_validation_inference">
     <configuration name="Main" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="项目代码" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -183,9 +178,6 @@
       <module name="项目代码" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
@@ -210,11 +202,11 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.train_validation_inference" />
+        <item itemvalue="Python.gnt_to_png" />
         <item itemvalue="Python.Main" />
         <item itemvalue="Python.main" />
         <item itemvalue="Python.ShuffleNet" />
-        <item itemvalue="Python.train_validation_inference" />
-        <item itemvalue="Python.gnt_to_png" />
       </list>
     </recent_temporary>
   </component>
@@ -287,6 +279,9 @@
       <workItem from="1576045286541" duration="4091000" />
       <workItem from="1576051174951" duration="471000" />
       <workItem from="1576052206465" duration="3453000" />
+      <workItem from="1576058678741" duration="7696000" />
+      <workItem from="1576068365693" duration="3953000" />
+      <workItem from="1576108986968" duration="7249000" />
     </task>
     <task id="LOCAL-00001" summary="goolenet">
       <created>1573527397230</created>
@@ -421,7 +416,14 @@
       <option name="project" value="LOCAL" />
       <updated>1575980879767</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="goolenet">
+      <created>1576058736512</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1576058736512</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

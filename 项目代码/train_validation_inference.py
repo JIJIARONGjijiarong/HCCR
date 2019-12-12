@@ -1,4 +1,5 @@
 import os
+import time
 import torch
 import torch.nn as nn
 import torch.nn.functional as  F
@@ -11,19 +12,19 @@ import pickle
 
 parse = argparse.ArgumentParser(description='Params for training. ')
 # 数据集根目录
-parse.add_argument('--root', type=str, default='H:/data', help='path to data set')
+parse.add_argument('--root', type=str, default='H:/', help='path to data set')
 # 模式，3选1
-parse.add_argument('--mode', type=str, default='train', choices=['train', 'validation', 'inference'])
+parse.add_argument('--mode', type=str, default='validation', choices=['train', 'validation', 'inference'])
 # checkpoint 路径
-parse.add_argument('--log_path', type=str, default='E:\Git\HCCR\data\log/log.pth', help='dir of checkpoints')
+parse.add_argument('--log_path', type=str, default='H:/log.pth', help='dir of checkpoints')
 
 parse.add_argument('--restore', type=bool, default=False, help='whether to restore checkpoints')
 
-parse.add_argument('--batch_size', type=int, default=16, help='size of mini-batch')
+parse.add_argument('--batch_size', type=int, default=32, help='size of mini-batch')
 parse.add_argument('--image_size', type=int, default=32, help='resize image')
 parse.add_argument('--epoch', type=int, default=100)
 # 我的数据集类别数是3755，所以给定了一个选择范围
-parse.add_argument('--num_class', type=int, default=100, choices=range(10, 3755))
+parse.add_argument('--num_class', type=int, default=3755, choices=range(10, 3755))
 args = parse.parse_args()
 
 
@@ -86,13 +87,13 @@ class MyDataset(Dataset):
 
 
 def train(model):
+    start = int(time.time())
     # 由于我的数据集图片尺寸不一，因此要进行resize，这里还可以加入数据增强，灰度变换，随机剪切等等
     transform = transforms.Compose([transforms.Resize((args.image_size, args.image_size)),
                                     transforms.Grayscale(),
                                     transforms.ToTensor()])
 
-    train_set = MyDataset(args.root + '/train.txt', num_class=args.num_class, transforms=transform)
-    train_loader = DataLoader(train_set, batch_size=args.batch_size, shuffle=True)
+
     # 选择使用的设备
     device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
     print(device)
@@ -116,6 +117,8 @@ def train(model):
         epoch = 0
 
     while epoch < args.epoch:
+        train_set = MyDataset(args.root + "/data_" + str(epoch % 10) + '/train.txt', num_class=args.num_class, transforms=transform)
+        train_loader = DataLoader(train_set, batch_size=args.batch_size, shuffle=True)
         running_loss = 0.0
 
         for i, data in enumerate(train_loader):
@@ -129,8 +132,8 @@ def train(model):
             optimizer.step()
 
             running_loss += loss.item()
-
-            print('epoch %5d: batch: %5d, loss: %f' % (epoch + 1, i + 1, running_loss / 200))
+            end = int(time.time())
+            print('epoch: %5d, batch: %5d, loss: %f, time: %5d' % (epoch + 1, i + 1, running_loss, end - start))
             running_loss = 0.0
             # 保存 checkpoint
 
@@ -145,16 +148,16 @@ def train(model):
     print('Finish training')
 
 
-def validation():
+def validation(model):
     transform = transforms.Compose([transforms.Resize((args.image_size, args.image_size)),
                                     transforms.Grayscale(),
                                     transforms.ToTensor()])
 
-    test_set = MyDataset(args.root + '/test.txt', num_class=args.num_class, transforms=transform)
+    test_set = MyDataset(args.root + "/data_0/train.txt", num_class=args.num_class, transforms=transform)
     test_loader = DataLoader(test_set, batch_size=args.batch_size)
 
     device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
-    model = ShuffleNet.ShuffleNetG3()
+    model = model()
     model.to(device)
 
     checkpoint = torch.load(args.log_path)
@@ -170,10 +173,9 @@ def validation():
             outputs = model(inputs)
             _, predict = torch.max(outputs.data, 1)
             total += labels.size(0)
-            correct += sum(int(predict == labels)).item()
+            correct += sum((predict == labels)).item()
 
-            if i % 100 == 99:
-                print('batch: %5d,\t acc: %f' % (i + 1, correct / total))
+            print('batch: %5d,\t acc: %f' % (i + 1, correct / total))
     print('Accuracy: %.2f%%' % (correct / total * 100))
 
 
@@ -211,8 +213,8 @@ if __name__ == '__main__':
     from Model import ShuffleNet
 
     model = ShuffleNet.ShuffleNetG3
-    classes_txt(args.root + '/train', args.root + '/train.txt', num_class=args.num_class)
-    classes_txt(args.root + '/test', args.root + '/test.txt', num_class=args.num_class)
+    #classes_txt(args.root + '/data_11/train', args.root + 'data_11/train.txt', num_class=args.num_class)
+    #classes_txt(args.root + '/test', args.root + '/test.txt', num_class=args.num_class)
 
     if args.mode == 'train':
         train(model)
