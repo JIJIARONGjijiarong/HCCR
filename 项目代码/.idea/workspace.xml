@@ -3,7 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="44cb127b-5d10-4104-8a74-4ca5b41ed9d1" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IO/gnt_to_png.py" beforeDir="false" afterPath="$PROJECT_DIR$/IO/gnt_to_png.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IO/MyHccrWindow.py" beforeDir="false" afterPath="$PROJECT_DIR$/IO/MyHccrWindow.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IO/main.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IO/screenshot.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/association/associat.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/train_validation_inference.py" beforeDir="false" afterPath="$PROJECT_DIR$/train_validation_inference.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -63,14 +67,11 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.train_validation_inference">
+  <component name="RunManager" selected="Python.Main">
     <configuration name="Main" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="项目代码" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
@@ -156,9 +157,6 @@
       <module name="项目代码" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/IO" />
       <option name="IS_MODULE_SDK" value="true" />
@@ -202,10 +200,10 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.train_validation_inference" />
-        <item itemvalue="Python.gnt_to_png" />
         <item itemvalue="Python.Main" />
         <item itemvalue="Python.main" />
+        <item itemvalue="Python.train_validation_inference" />
+        <item itemvalue="Python.gnt_to_png" />
         <item itemvalue="Python.ShuffleNet" />
       </list>
     </recent_temporary>
@@ -281,7 +279,14 @@
       <workItem from="1576052206465" duration="3453000" />
       <workItem from="1576058678741" duration="7696000" />
       <workItem from="1576068365693" duration="3953000" />
-      <workItem from="1576108986968" duration="7249000" />
+      <workItem from="1576108986968" duration="13133000" />
+      <workItem from="1576140804333" duration="8427000" />
+      <workItem from="1576201992381" duration="2264000" />
+      <workItem from="1576320184806" duration="5021000" />
+      <workItem from="1576412925856" duration="1884000" />
+      <workItem from="1576454673631" duration="8958000" />
+      <workItem from="1576476494211" duration="68000" />
+      <workItem from="1576476704260" duration="13583000" />
     </task>
     <task id="LOCAL-00001" summary="goolenet">
       <created>1573527397230</created>
@@ -495,6 +500,7 @@
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/$board.coverage" NAME="board Coverage Results" MODIFIED="1575942260942" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/IO" />
     <SUITE FILE_PATH="coverage/$input.coverage" NAME="input Coverage Results" MODIFIED="1572693224743" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/IO" />
+    <SUITE FILE_PATH="coverage/$train_validation_inference.coverage" NAME="train_validation_inference Coverage Results" MODIFIED="1576476149668" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/$googlenet.coverage" NAME="googlenet Coverage Results" MODIFIED="1574749942409" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Model" />
   </component>
 </project>

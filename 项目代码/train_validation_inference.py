@@ -14,11 +14,11 @@ parse = argparse.ArgumentParser(description='Params for training. ')
 # 数据集根目录
 parse.add_argument('--root', type=str, default='H:/', help='path to data set')
 # 模式，3选1
-parse.add_argument('--mode', type=str, default='validation', choices=['train', 'validation', 'inference'])
+parse.add_argument('--mode', type=str, default='inference', choices=['train', 'validation', 'inference'])
 # checkpoint 路径
-parse.add_argument('--log_path', type=str, default='H:/log.pth', help='dir of checkpoints')
+parse.add_argument('--log_path', type=str, default='H:/log.pth', help='dir of check  points')
 
-parse.add_argument('--restore', type=bool, default=False, help='whether to restore checkpoints')
+parse.add_argument('--restore', type=bool, default=True, help='whether to restore checkpoints')
 
 parse.add_argument('--batch_size', type=int, default=32, help='size of mini-batch')
 parse.add_argument('--image_size', type=int, default=32, help='resize image')
@@ -104,7 +104,7 @@ def train(model):
     model.train()
 
     criterion = nn.CrossEntropyLoss()
-    optimizer = optim.Adam(model.parameters(), lr=0.001)
+    optimizer = optim.Adam(model.parameters(), lr=0.00001)
     # 由命令行参数决定是否从之前的checkpoint开始训练
     if args.restore:
         checkpoint = torch.load(args.log_path)
@@ -153,7 +153,7 @@ def validation(model):
                                     transforms.Grayscale(),
                                     transforms.ToTensor()])
 
-    test_set = MyDataset(args.root + "/data_0/train.txt", num_class=args.num_class, transforms=transform)
+    test_set = MyDataset(args.root + "/data_19/train.txt", num_class=args.num_class, transforms=transform)
     test_loader = DataLoader(test_set, batch_size=args.batch_size)
 
     device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
@@ -190,7 +190,6 @@ def inference(model, img_path):
         transforms.Grayscale(),
         transforms.ToTensor()
     ])
-
     input = Image.open(img_path).convert('RGB')
     input = transform(input)
     input = input.unsqueeze(0)

@@ -13,10 +13,9 @@ from PIL import ImageGrab, Image
 
 class MyHccrWindow(QWidget):
 
-    def __init__(self,model,inference):
+    def __init__(self,fun):
         super(MyHccrWindow, self,).__init__()
-        self.model = model
-        self.inference = inference
+        self.fun =fun
         self.resize(480, 500)  # resize设置宽高
         self.move(100, 100)    # move设置位置
         self.setWindowFlags(Qt.FramelessWindowHint)  # 窗体无边框
@@ -99,13 +98,23 @@ class MyHccrWindow(QWidget):
     def btn_recognize_on_clicked(self):
         bbox = (104, 104, 572,550)
         im = ImageGrab.grab(bbox)    # 截屏，手写数字部分
-        im = im.resize((32, 32), Image.ANTIALIAS)  # 将截图转换成 32 * 32 像素
-        im.save("screenshot.jpg")
+        im = im.resize((548, 548), Image.ANTIALIAS)  # 将截图转换成 32 * 32 像素
+        im.save("ans.png")
+        img = Image.open("ans.png")
+        Img = img.convert('L')
+        threshold = 200
+        table = []
+        for i in range(256):
+            if i < threshold:
+                table.append(0)
+            else:
+                table.append(1)
+        photo = Img.point(table, '1')
+        photo.save('ans.png')
 
-        pred, value = self.inference(self.model,"screenshot.jpg")
-        recognize_result = value[0]
+        ans = self.fun("ans.png")
 
-        self.label_result.setText(str(recognize_result))  # 显示识别结果
+        self.label_result.setText(str(ans))  # 显示识别结果
         self.update()
 
     def btn_clear_on_clicked(self):
