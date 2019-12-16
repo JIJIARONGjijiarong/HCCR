@@ -4,10 +4,74 @@
     <list default="true" id="44cb127b-5d10-4104-8a74-4ca5b41ed9d1" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/IO/MyHccrWindow.py" beforeDir="false" afterPath="$PROJECT_DIR$/IO/MyHccrWindow.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IO/main.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IO/screenshot.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/association/associat.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IO/gnt_to_png.py" beforeDir="false" afterPath="$PROJECT_DIR$/IO/gnt_to_png.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IO/input.py" beforeDir="false" afterPath="$PROJECT_DIR$/IO/input.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IO/output.py" beforeDir="false" afterPath="$PROJECT_DIR$/IO/output.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model/ShuffleNet.py" beforeDir="false" afterPath="$PROJECT_DIR$/Model/ShuffleNet.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model/googlenet.py" beforeDir="false" afterPath="$PROJECT_DIR$/Model/googlenet.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model/log.pth" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model/runs/Dec10_11-10-03_DESKTOP-A4MKRMNoveral_situation/events.out.tfevents.1575947403.DESKTOP-A4MKRMN" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model/runs/Dec11_09-37-26_DESKTOP-A4MKRMN0/events.out.tfevents.1576028246.DESKTOP-A4MKRMN" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model/vgg.py" beforeDir="false" afterPath="$PROJECT_DIR$/Model/vgg.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model/vgg_.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/association/association.py" beforeDir="false" afterPath="$PROJECT_DIR$/association/association.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/association/new.py" beforeDir="false" afterPath="$PROJECT_DIR$/association/new.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/Dec10_14-03-00_DESKTOP-A4MKRMNoveral_situation/events.out.tfevents.1575957780.DESKTOP-A4MKRMN" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/Dec10_14-03-12_DESKTOP-A4MKRMN0/events.out.tfevents.1575957792.DESKTOP-A4MKRMN" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/Dec10_14-19-04_DESKTOP-A4MKRMNoveral_situation/events.out.tfevents.1575958744.DESKTOP-A4MKRMN" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/Dec10_14-19-09_DESKTOP-A4MKRMN0/events.out.tfevents.1575958749.DESKTOP-A4MKRMN" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/Dec10_14-20-53_DESKTOP-A4MKRMNoveral_situation/events.out.tfevents.1575958853.DESKTOP-A4MKRMN" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/Dec10_14-20-55_DESKTOP-A4MKRMN0/events.out.tfevents.1575958855.DESKTOP-A4MKRMN" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/Dec10_14-39-35_DESKTOP-A4MKRMNoveral_situation/events.out.tfevents.1575959975.DESKTOP-A4MKRMN" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/Dec10_14-39-37_DESKTOP-A4MKRMN0/events.out.tfevents.1575959977.DESKTOP-A4MKRMN" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/Dec10_15-09-08_DESKTOP-A4MKRMNoveral_situation/events.out.tfevents.1575961748.DESKTOP-A4MKRMN" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/Dec10_15-09-13_DESKTOP-A4MKRMN0/events.out.tfevents.1575961753.DESKTOP-A4MKRMN" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/Dec10_15-12-04_DESKTOP-A4MKRMNoveral_situation/events.out.tfevents.1575961924.DESKTOP-A4MKRMN" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/Dec10_15-12-13_DESKTOP-A4MKRMN0/events.out.tfevents.1575961933.DESKTOP-A4MKRMN" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/Dec10_15-16-14_DESKTOP-A4MKRMNoveral_situation/events.out.tfevents.1575962174.DESKTOP-A4MKRMN" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/Dec10_15-16-18_DESKTOP-A4MKRMN0/events.out.tfevents.1575962178.DESKTOP-A4MKRMN" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/Dec10_15-17-40_DESKTOP-A4MKRMNoveral_situation/events.out.tfevents.1575962260.DESKTOP-A4MKRMN" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/Dec10_15-17-53_DESKTOP-A4MKRMNoveral_situation/events.out.tfevents.1575962273.DESKTOP-A4MKRMN" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/Dec10_15-17-56_DESKTOP-A4MKRMN0/events.out.tfevents.1575962276.DESKTOP-A4MKRMN" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/Dec10_15-18-53_DESKTOP-A4MKRMNoveral_situation/events.out.tfevents.1575962333.DESKTOP-A4MKRMN" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/Dec10_15-18-56_DESKTOP-A4MKRMN0/events.out.tfevents.1575962336.DESKTOP-A4MKRMN" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/Dec10_15-19-28_DESKTOP-A4MKRMN1/events.out.tfevents.1575962368.DESKTOP-A4MKRMN" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/Dec10_15-19-36_DESKTOP-A4MKRMN2/events.out.tfevents.1575962376.DESKTOP-A4MKRMN" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/Dec10_15-19-43_DESKTOP-A4MKRMN3/events.out.tfevents.1575962384.DESKTOP-A4MKRMN" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/Dec10_15-19-51_DESKTOP-A4MKRMN4/events.out.tfevents.1575962392.DESKTOP-A4MKRMN" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/Dec10_15-19-59_DESKTOP-A4MKRMN5/events.out.tfevents.1575962400.DESKTOP-A4MKRMN" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/Dec10_15-20-07_DESKTOP-A4MKRMN6/events.out.tfevents.1575962409.DESKTOP-A4MKRMN" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/Dec10_15-20-16_DESKTOP-A4MKRMN7/events.out.tfevents.1575962418.DESKTOP-A4MKRMN" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/Dec10_15-20-26_DESKTOP-A4MKRMN8/events.out.tfevents.1575962427.DESKTOP-A4MKRMN" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/Dec10_15-20-34_DESKTOP-A4MKRMN9/events.out.tfevents.1575962435.DESKTOP-A4MKRMN" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/Dec10_15-20-44_DESKTOP-A4MKRMN10/events.out.tfevents.1575962444.DESKTOP-A4MKRMN" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/Dec10_15-20-53_DESKTOP-A4MKRMN11/events.out.tfevents.1575962453.DESKTOP-A4MKRMN" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/Dec10_15-21-00_DESKTOP-A4MKRMN12/events.out.tfevents.1575962461.DESKTOP-A4MKRMN" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/Dec10_15-21-08_DESKTOP-A4MKRMN13/events.out.tfevents.1575962469.DESKTOP-A4MKRMN" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/Dec10_15-21-17_DESKTOP-A4MKRMN14/events.out.tfevents.1575962477.DESKTOP-A4MKRMN" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/Dec10_15-37-18_DESKTOP-A4MKRMNoveral_situation/events.out.tfevents.1575963438.DESKTOP-A4MKRMN" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/Dec10_15-37-21_DESKTOP-A4MKRMN13/events.out.tfevents.1575963441.DESKTOP-A4MKRMN" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/Dec10_15-37-31_DESKTOP-A4MKRMN14/events.out.tfevents.1575963451.DESKTOP-A4MKRMN" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/Dec10_15-41-20_DESKTOP-A4MKRMNoveral_situation/events.out.tfevents.1575963680.DESKTOP-A4MKRMN" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/Dec11_08-39-39_DESKTOP-A4MKRMNoveral_situation/events.out.tfevents.1576024779.DESKTOP-A4MKRMN" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/Dec11_08-39-47_DESKTOP-A4MKRMN13/events.out.tfevents.1576024787.DESKTOP-A4MKRMN" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/Dec11_08-40-05_DESKTOP-A4MKRMNoveral_situation/events.out.tfevents.1576024805.DESKTOP-A4MKRMN" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/Dec11_08-40-10_DESKTOP-A4MKRMN13/events.out.tfevents.1576024810.DESKTOP-A4MKRMN" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/Dec11_08-42-23_DESKTOP-A4MKRMNoveral_situation/events.out.tfevents.1576024943.DESKTOP-A4MKRMN" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/Dec11_08-42-27_DESKTOP-A4MKRMN0/events.out.tfevents.1576024947.DESKTOP-A4MKRMN" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/Dec11_09-09-07_DESKTOP-A4MKRMNoveral_situation/events.out.tfevents.1576026547.DESKTOP-A4MKRMN" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/Dec11_09-09-11_DESKTOP-A4MKRMN0/events.out.tfevents.1576026551.DESKTOP-A4MKRMN" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/Dec11_09-26-51_DESKTOP-A4MKRMNoveral_situation/events.out.tfevents.1576027611.DESKTOP-A4MKRMN" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/Dec11_09-26-56_DESKTOP-A4MKRMN0/events.out.tfevents.1576027616.DESKTOP-A4MKRMN" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/Dec11_09-27-31_DESKTOP-A4MKRMNoveral_situation/events.out.tfevents.1576027651.DESKTOP-A4MKRMN" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/Dec11_09-27-36_DESKTOP-A4MKRMN0/events.out.tfevents.1576027656.DESKTOP-A4MKRMN" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/Dec11_09-30-30_DESKTOP-A4MKRMNoveral_situation/events.out.tfevents.1576027830.DESKTOP-A4MKRMN" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/Dec11_09-30-34_DESKTOP-A4MKRMN0/events.out.tfevents.1576027834.DESKTOP-A4MKRMN" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/Dec11_09-41-41_DESKTOP-A4MKRMNoveral_situation/events.out.tfevents.1576028501.DESKTOP-A4MKRMN" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/Dec11_09-41-45_DESKTOP-A4MKRMN0/events.out.tfevents.1576028505.DESKTOP-A4MKRMN" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/Dec11_11-46-26_DESKTOP-A4MKRMN0/events.out.tfevents.1576035986.DESKTOP-A4MKRMN" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/Dec11_11-47-29_DESKTOP-A4MKRMN0/events.out.tfevents.1576036049.DESKTOP-A4MKRMN" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/Dec11_14-03-10_DESKTOP-A4MKRMN0/events.out.tfevents.1576044190.DESKTOP-A4MKRMN" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/train_validation_inference.py" beforeDir="false" afterPath="$PROJECT_DIR$/train_validation_inference.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -72,6 +136,9 @@
       <module name="项目代码" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
@@ -157,6 +224,9 @@
       <module name="项目代码" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/IO" />
       <option name="IS_MODULE_SDK" value="true" />
@@ -176,6 +246,9 @@
       <module name="项目代码" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
@@ -286,7 +359,8 @@
       <workItem from="1576412925856" duration="1884000" />
       <workItem from="1576454673631" duration="8958000" />
       <workItem from="1576476494211" duration="68000" />
-      <workItem from="1576476704260" duration="13583000" />
+      <workItem from="1576476704260" duration="13935000" />
+      <workItem from="1576497120707" duration="214000" />
     </task>
     <task id="LOCAL-00001" summary="goolenet">
       <created>1573527397230</created>
@@ -428,7 +502,14 @@
       <option name="project" value="LOCAL" />
       <updated>1576058736512</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="goolenet">
+      <created>1576496846043</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1576496846043</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

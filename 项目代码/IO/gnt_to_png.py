@@ -1,4 +1,4 @@
-for iostreams in range(6,20):
+for iostreams in range(6, 20):
     import os
     import struct
 

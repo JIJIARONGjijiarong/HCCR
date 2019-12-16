@@ -1,20 +1,20 @@
+import argparse  # 提取命令行参数
 import os
+import pickle
 import time
+
 import torch
 import torch.nn as nn
-import torch.nn.functional as  F
 import torch.optim as optim
 import torchvision.transforms as transforms
-from torch.utils.data import DataLoader, Dataset
 from PIL import Image
-import argparse # 提取命令行参数
-import pickle
+from torch.utils.data import DataLoader, Dataset
 
 parse = argparse.ArgumentParser(description='Params for training. ')
 # 数据集根目录
 parse.add_argument('--root', type=str, default='H:/', help='path to data set')
 # 模式，3选1
-parse.add_argument('--mode', type=str, default='inference', choices=['train', 'validation', 'inference'])
+parse.add_argument('--mode', type=str, default='train', choices=['train', 'validation', 'inference'])
 # checkpoint 路径
 parse.add_argument('--log_path', type=str, default='H:/log.pth', help='dir of check  points')
 
@@ -36,15 +36,15 @@ def classes_txt(root, out_path, num_class=None):
     :param num_class: how many classes needed
     :return: None
     '''
-    dirs = os.listdir(root) # 列出根目录下所有类别所在文件夹名
-    if not num_class:		# 不指定类别数量就读取所有
+    dirs = os.listdir(root)  # 列出根目录下所有类别所在文件夹名
+    if not num_class:  # 不指定类别数量就读取所有
         num_class = len(dirs)
 
-    if not os.path.exists(out_path): # 输出文件路径不存在就新建
+    if not os.path.exists(out_path):  # 输出文件路径不存在就新建
         f = open(out_path, 'w')
         f.close()
     # 如果文件中本来就有一部分内容，只需要补充剩余部分
-	# 如果文件中数据的类别数比需要的多就跳过
+    # 如果文件中数据的类别数比需要的多就跳过
     with open(out_path, 'r+') as f:
         try:
             end = int(f.readlines()[-1].split('/')[-2]) + 1
@@ -58,11 +58,12 @@ def classes_txt(root, out_path, num_class=None):
                 for file in files:
                     f.write(os.path.join(root, dir, file) + '\n')
 
+
 class MyDataset(Dataset):
     def __init__(self, txt_path, num_class, transforms=None):
         super(MyDataset, self).__init__()
-        images = [] # 存储图片路径
-        labels = [] # 存储类别名，在本例中是数字
+        images = []  # 存储图片路径
+        labels = []  # 存储类别名，在本例中是数字
         # 打开上一步生成的txt文件
         with open(txt_path, 'r') as f:
             for line in f:
@@ -73,13 +74,13 @@ class MyDataset(Dataset):
                 labels.append(int(line.split('\\')[-2]))
         self.images = images
         self.labels = labels
-        self.transforms = transforms # 图片需要进行的变换，ToTensor()等等
+        self.transforms = transforms  # 图片需要进行的变换，ToTensor()等等
 
     def __getitem__(self, index):
-        image = Image.open(self.images[index]).convert('RGB') # 用PIL.Image读取图像
+        image = Image.open(self.images[index]).convert('RGB')  # 用PIL.Image读取图像
         label = self.labels[index]
         if self.transforms is not None:
-            image = self.transforms(image) # 进行变换
+            image = self.transforms(image)  # 进行变换
         return image, label
 
     def __len__(self):
@@ -92,7 +93,6 @@ def train(model):
     transform = transforms.Compose([transforms.Resize((args.image_size, args.image_size)),
                                     transforms.Grayscale(),
                                     transforms.ToTensor()])
-
 
     # 选择使用的设备
     device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
@@ -117,7 +117,8 @@ def train(model):
         epoch = 0
 
     while epoch < args.epoch:
-        train_set = MyDataset(args.root + "/data_" + str(epoch % 10) + '/train.txt', num_class=args.num_class, transforms=transform)
+        train_set = MyDataset(args.root + "/data_" + str(epoch % 10) + '/train.txt', num_class=args.num_class,
+                              transforms=transform)
         train_loader = DataLoader(train_set, batch_size=args.batch_size, shuffle=True)
         running_loss = 0.0
 
@@ -142,7 +143,7 @@ def train(model):
                     'model_state_dict': model.state_dict(),
                     'optimizer_state_dict': optimizer.state_dict(),
                     'loss': loss},
-                    args.log_path)
+                   args.log_path)
         epoch += 1
 
     print('Finish training')
@@ -208,12 +209,13 @@ def inference(model, img_path):
     print(value)
     return pred, value
 
+
 if __name__ == '__main__':
     from Model import ShuffleNet
 
     model = ShuffleNet.ShuffleNetG3
-    #classes_txt(args.root + '/data_11/train', args.root + 'data_11/train.txt', num_class=args.num_class)
-    #classes_txt(args.root + '/test', args.root + '/test.txt', num_class=args.num_class)
+    # classes_txt(args.root + '/data_11/train', args.root + 'data_11/train.txt', num_class=args.num_class)
+    # classes_txt(args.root + '/test', args.root + '/test.txt', num_class=args.num_class)
 
     if args.mode == 'train':
         train(model)

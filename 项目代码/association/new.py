@@ -1,7 +1,10 @@
-from collections import defaultdict
 import jieba
 import re
-import numpy as np
+import re
+
+import jieba
+
+
 def cut_words(temp:str):
     '''
     分词的函数

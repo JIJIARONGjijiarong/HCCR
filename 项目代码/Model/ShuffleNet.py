@@ -2,6 +2,7 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 
+
 class ShuffleBlock(nn.Module):
     def __init__(self, groups):
         super(ShuffleBlock, self).__init__()
@@ -9,10 +10,10 @@ class ShuffleBlock(nn.Module):
 
     def forward(self, x):
         '''Channel shuffle: [N,C,H,W] -> [N,g,C/g,H,W] -> [N,C/g,g,H,w] -> [N,C,H,W]'''
-        N,C,H,W = x.size()
+        N, C, H, W = x.size()
         g = self.groups
         # 维度变换之后必须要使用.contiguous()使得张量在内存连续之后才能调用view函数
-        return x.view(N,g,int(C/g),H,W).permute(0,2,1,3,4).contiguous().view(N,C,H,W)
+        return x.view(N, g, int(C / g), H, W).permute(0, 2, 1, 3, 4).contiguous().view(N, C, H, W)
 
 
 class Bottleneck(nn.Module):
@@ -21,10 +22,9 @@ class Bottleneck(nn.Module):
         self.stride = stride
 
         # bottleneck层中间层的channel数变为输出channel数的1/4
-        mid_planes = int(out_planes/4)
+        mid_planes = int(out_planes / 4)
 
-
-        g = 1 if in_planes==24 else groups
+        g = 1 if in_planes == 24 else groups
         # 作者提到不在stage2的第一个pointwise层使用组卷积,因为输入channel数量太少,只有24
         self.conv1 = nn.Conv2d(in_planes, mid_planes,
                                kernel_size=1, groups=g, bias=False)
@@ -48,7 +48,7 @@ class Bottleneck(nn.Module):
         out = F.relu(self.bn2(self.conv2(out)))
         out = self.bn3(self.conv3(out))
         res = self.shortcut(x)
-        out = F.relu(torch.cat([out,res], 1)) if self.stride==2 else F.relu(out+res)
+        out = F.relu(torch.cat([out, res], 1)) if self.stride == 2 else F.relu(out + res)
         return out
 
 
@@ -72,7 +72,7 @@ class ShuffleNet(nn.Module):
         for i in range(num_blocks):
             if i == 0:
                 layers.append(Bottleneck(self.in_planes,
-                                         out_planes-self.in_planes,
+                                         out_planes - self.in_planes,
                                          stride=2, groups=groups))
             else:
                 layers.append(Bottleneck(self.in_planes,
@@ -94,16 +94,17 @@ class ShuffleNet(nn.Module):
 
 def ShuffleNetG2():
     cfg = {
-        'out_planes': [200,400,800],
-        'num_blocks': [4,8,4],
+        'out_planes': [200, 400, 800],
+        'num_blocks': [4, 8, 4],
         'groups': 2
     }
     return ShuffleNet(cfg)
 
+
 def ShuffleNetG3():
     cfg = {
-        'out_planes': [240,480,960],
-        'num_blocks': [4,8,4],
+        'out_planes': [240, 480, 960],
+        'num_blocks': [4, 8, 4],
         'groups': 3
     }
     return ShuffleNet(cfg)

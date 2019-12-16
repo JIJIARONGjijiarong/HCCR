@@ -1,15 +1,13 @@
-import torch.nn as nn
+import argparse
 import math
-
 import os
+
 import torch
 import torch.nn as nn
-import torch.nn.functional as  F
 import torch.optim as optim
 import torchvision.transforms as transforms
-from torch.utils.data import DataLoader, Dataset
 from PIL import Image
-import argparse
+from torch.utils.data import DataLoader, Dataset
 
 parse = argparse.ArgumentParser(description='Params for training. ')
 parse.add_argument('--root', type=str, default='E:\Git\HCCR\data', help='path to data set')
@@ -21,6 +19,7 @@ parse.add_argument('--image_size', type=int, default=224, help='resize image')
 parse.add_argument('--epoch', type=int, default=10)
 parse.add_argument('--num_class', type=int, default=100, choices=range(10, 3755))
 args = parse.parse_args()
+
 
 class MyDataset(Dataset):
     def __init__(self, txt_path, num_class, transforms=None):
@@ -51,7 +50,7 @@ class MyDataset(Dataset):
 
 def train():
     transform = transforms.Compose([transforms.Resize((args.image_size, args.image_size)),
-                                    #transforms.Grayscale(),
+                                    # transforms.Grayscale(),
                                     transforms.ToTensor()])
 
     train_set = MyDataset(args.root + '/train.txt', num_class=args.num_class, transforms=transform)
@@ -60,7 +59,7 @@ def train():
     device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
     print(device)
 
-    model = VGG(make_layers(cfg['E'], batch_norm=True),num_classes=args.num_class)
+    model = VGG(make_layers(cfg['E'], batch_norm=True), num_classes=args.num_class)
     model.to(device)
 
     model.train()
@@ -117,7 +116,7 @@ def validation():
     test_loader = DataLoader(test_set, batch_size=args.batch_size)
 
     device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
-    model = VGG(make_layers(cfg['E'], batch_norm=True),num_classes=args.num_class)
+    model = VGG(make_layers(cfg['E'], batch_norm=True), num_classes=args.num_class)
     model.to(device)
 
     checkpoint = torch.load(args.log_path)
@@ -160,7 +159,7 @@ def inference():
     input = Image.open(img_path).convert('RGB')
     input = transform(input)
     input = input.unsqueeze(0)
-    model = VGG(make_layers(cfg['E'], batch_norm=True),num_classes=args.num_class)
+    model = VGG(make_layers(cfg['E'], batch_norm=True), num_classes=args.num_class)
     model.eval()
     checkpoint = torch.load(args.log_path)
     model.load_state_dict(checkpoint['model_state_dict'])
@@ -200,14 +199,13 @@ def classes_txt(root, out_path, num_class=None):
                     f.write(os.path.join(root, dir, file) + '\n')
 
 
-
 class VGG(nn.Module):
 
     def __init__(self, features, num_classes=1000, init_weights=True):
         super(VGG, self).__init__()
         self.features = features
         self.classifier = nn.Sequential(
-            nn.Linear(512*7*7, 4096),
+            nn.Linear(512 * 7 * 7, 4096),
             nn.ReLU(True),
             nn.Dropout(),
             nn.Linear(4096, 4096),
@@ -237,6 +235,8 @@ class VGG(nn.Module):
             elif isinstance(m, nn.Linear):
                 m.weight.data.normal_(0, 0.01)
                 m.bias.data.zero_()
+
+
 def make_layers(cfg, batch_norm=False):
     layers = []
     in_channels = 3
@@ -259,31 +259,46 @@ cfg = {
     'D': [64, 64, 'M', 128, 128, 'M', 256, 256, 256, 'M', 512, 512, 512, 'M', 512, 512, 512, 'M'],
     'E': [64, 64, 'M', 128, 128, 'M', 256, 256, 256, 256, 'M', 512, 512, 512, 512, 'M', 512, 512, 512, 512, 'M'],
 }
+
+
 def vgg11(**kwargs):
     model = VGG(make_layers(cfg['A']), **kwargs)
     return model
+
+
 def vgg11_bn(**kwargs):
     model = VGG(make_layers(cfg['A'], batch_norm=True), **kwargs)
     return model
+
+
 def vgg13(**kwargs):
     model = VGG(make_layers(cfg['B']), **kwargs)
     return model
+
+
 def vgg13_bn(**kwargs):
     model = VGG(make_layers(cfg['B'], batch_norm=True), **kwargs)
     return model
+
+
 def vgg16(**kwargs):
     model = VGG(make_layers(cfg['D']), **kwargs)
     return model
+
+
 def vgg16_bn(**kwargs):
     model = VGG(make_layers(cfg['D'], batch_norm=True), **kwargs)
     return model
+
+
 def vgg19(**kwargs):
     model = VGG(make_layers(cfg['E']), **kwargs)
     return model
+
+
 def vgg19_bn(**kwargs):
     model = VGG(make_layers(cfg['E'], batch_norm=True), **kwargs)
     return model
-
 
 
 if __name__ == '__main__':

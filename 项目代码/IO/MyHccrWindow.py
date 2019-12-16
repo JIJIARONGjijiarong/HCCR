@@ -5,24 +5,25 @@ Created on Wed Dec 11 08:46:31 2019
 @author: 邬洲
 """
 
-#import tensorflow as tf
-from PyQt5.QtWidgets import (QWidget, QPushButton, QLabel)
-from PyQt5.QtGui import (QPainter, QPen, QFont)
-from PyQt5.QtCore import Qt
 from PIL import ImageGrab, Image
+from PyQt5.QtCore import Qt
+from PyQt5.QtGui import (QPainter, QPen, QFont)
+# import tensorflow as tf
+from PyQt5.QtWidgets import (QWidget, QPushButton, QLabel)
+
 
 class MyHccrWindow(QWidget):
 
-    def __init__(self,fun):
-        super(MyHccrWindow, self,).__init__()
-        self.fun =fun
+    def __init__(self, fun):
+        super(MyHccrWindow, self, ).__init__()
+        self.fun = fun
         self.resize(480, 500)  # resize设置宽高
-        self.move(100, 100)    # move设置位置
+        self.move(100, 100)  # move设置位置
         self.setWindowFlags(Qt.FramelessWindowHint)  # 窗体无边框
-        #setMouseTracking设置为False，否则不按下鼠标时也会跟踪鼠标事件
+        # setMouseTracking设置为False，否则不按下鼠标时也会跟踪鼠标事件
         self.setMouseTracking(False)
 
-        self.pos_xy = []  #保存鼠标移动过的点
+        self.pos_xy = []  # 保存鼠标移动过的点
 
         # 添加一系列控件
         self.label_draw = QLabel('', self)
@@ -41,7 +42,7 @@ class MyHccrWindow(QWidget):
         self.label_result.setAlignment(Qt.AlignCenter)
 
         self.btn_recognize = QPushButton("识别", self)
-        self.btn_recognize.setGeometry(130,460, 50, 35)
+        self.btn_recognize.setGeometry(130, 460, 50, 35)
         self.btn_recognize.clicked.connect(self.btn_recognize_on_clicked)
 
         self.btn_clear = QPushButton("清空", self)
@@ -78,9 +79,9 @@ class MyHccrWindow(QWidget):
         '''
             按住鼠标移动事件：将当前点添加到pos_xy列表中
         '''
-        #中间变量pos_tmp提取当前点
+        # 中间变量pos_tmp提取当前点
         pos_tmp = (event.pos().x(), event.pos().y())
-        #pos_tmp添加到self.pos_xy中
+        # pos_tmp添加到self.pos_xy中
         self.pos_xy.append(pos_tmp)
 
         self.update()
@@ -96,8 +97,8 @@ class MyHccrWindow(QWidget):
         self.update()
 
     def btn_recognize_on_clicked(self):
-        bbox = (104, 104, 572,550)
-        im = ImageGrab.grab(bbox)    # 截屏，手写数字部分
+        bbox = (104, 104, 572, 550)
+        im = ImageGrab.grab(bbox)  # 截屏，手写数字部分
         im = im.resize((548, 548), Image.ANTIALIAS)  # 将截图转换成 32 * 32 像素
         im.save("ans.png")
         img = Image.open("ans.png")
