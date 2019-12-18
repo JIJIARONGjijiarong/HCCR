@@ -1,5 +1,3 @@
-import jieba
-import re
 import re
 
 import jieba

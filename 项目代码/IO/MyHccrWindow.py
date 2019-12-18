@@ -8,7 +8,6 @@ Created on Wed Dec 11 08:46:31 2019
 from PIL import ImageGrab, Image
 from PyQt5.QtCore import Qt
 from PyQt5.QtGui import (QPainter, QPen, QFont)
-# import tensorflow as tf
 from PyQt5.QtWidgets import (QWidget, QPushButton, QLabel)
 
 

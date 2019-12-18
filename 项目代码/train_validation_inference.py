@@ -20,7 +20,7 @@ parse.add_argument('--log_path', type=str, default='H:/log.pth', help='dir of ch
 
 parse.add_argument('--restore', type=bool, default=True, help='whether to restore checkpoints')
 
-parse.add_argument('--batch_size', type=int, default=32, help='size of mini-batch')
+parse.add_argument('--batch_size', type=int, default=30, help='size of mini-batch')
 parse.add_argument('--image_size', type=int, default=32, help='resize image')
 parse.add_argument('--epoch', type=int, default=100)
 # 我的数据集类别数是3755，所以给定了一个选择范围
@@ -29,13 +29,13 @@ args = parse.parse_args()
 
 
 def classes_txt(root, out_path, num_class=None):
-    '''
+    """
     write image paths (containing class name) into a txt file.
     :param root: data set path
     :param out_path: txt file path
     :param num_class: how many classes needed
     :return: None
-    '''
+    """
     dirs = os.listdir(root)  # 列出根目录下所有类别所在文件夹名
     if not num_class:  # 不指定类别数量就读取所有
         num_class = len(dirs)
@@ -91,6 +91,7 @@ def train(model):
     start = int(time.time())
     # 由于我的数据集图片尺寸不一，因此要进行resize，这里还可以加入数据增强，灰度变换，随机剪切等等
     transform = transforms.Compose([transforms.Resize((args.image_size, args.image_size)),
+                                    transforms.RandomRotation(10),
                                     transforms.Grayscale(),
                                     transforms.ToTensor()])
 
@@ -115,7 +116,8 @@ def train(model):
     else:
         loss = 0.0
         epoch = 0
-
+    # epoch = 0
+    # loss = 0
     while epoch < args.epoch:
         train_set = MyDataset(args.root + "/data_" + str(epoch % 10) + '/train.txt', num_class=args.num_class,
                               transforms=transform)
@@ -150,11 +152,14 @@ def train(model):
 
 
 def validation(model):
+    from torchvision import datasets
+    from tensorboardX import SummaryWriter
+    writer = SummaryWriter()
     transform = transforms.Compose([transforms.Resize((args.image_size, args.image_size)),
                                     transforms.Grayscale(),
                                     transforms.ToTensor()])
 
-    test_set = MyDataset(args.root + "/data_19/train.txt", num_class=args.num_class, transforms=transform)
+    test_set = MyDataset(args.root + "/test/train.txt", num_class=args.num_class, transforms=transform)
     test_loader = DataLoader(test_set, batch_size=args.batch_size)
 
     device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
@@ -175,9 +180,12 @@ def validation(model):
             _, predict = torch.max(outputs.data, 1)
             total += labels.size(0)
             correct += sum((predict == labels)).item()
-
-            print('batch: %5d,\t acc: %f' % (i + 1, correct / total))
+            to = labels.size(0)
+            co = sum((predict == labels)).item()
+            writer.add_scalar("name",co / to,global_step=i+1)
+            print('batch: %5d,\t acc: %f' % (i + 1, co / to))
     print('Accuracy: %.2f%%' % (correct / total * 100))
+    writer.close()
 
 
 def inference(model, img_path):
@@ -214,7 +222,7 @@ if __name__ == '__main__':
     from Model import ShuffleNet
 
     model = ShuffleNet.ShuffleNetG3
-    # classes_txt(args.root + '/data_11/train', args.root + 'data_11/train.txt', num_class=args.num_class)
+    #classes_txt(args.root + '/test/train', args.root + 'test/train.txt', num_class=args.num_class)
     # classes_txt(args.root + '/test', args.root + '/test.txt', num_class=args.num_class)
 
     if args.mode == 'train':

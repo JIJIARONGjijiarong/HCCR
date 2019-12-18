@@ -1,4 +1,4 @@
-for iostreams in range(6, 20):
+for iostreams in range(1):
     import os
     import struct
 
@@ -6,9 +6,9 @@ for iostreams in range(6, 20):
     from PIL import Image
 
     # data文件夹存放转换后的.png文件
-    data_dir = 'H:\\data_' + str(iostreams)
+    data_dir = 'H:\\test'
     # 路径为存放数据集解压后的.gnt文件
-    train_data_dir = data_dir + '\\HWDB1.1trn_gnt_P1'
+    train_data_dir = data_dir + '\\HWDB1.1tst_gnt'
 
 
     # test_data_dir = data_dir + '\\HWDB1.1tst_gnt'

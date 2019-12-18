@@ -9,10 +9,10 @@ class ShuffleBlock(nn.Module):
         self.groups = groups
 
     def forward(self, x):
-        '''Channel shuffle: [N,C,H,W] -> [N,g,C/g,H,W] -> [N,C/g,g,H,w] -> [N,C,H,W]'''
+
         N, C, H, W = x.size()
         g = self.groups
-        # 维度变换之后必须要使用.contiguous()使得张量在内存连续之后才能调用view函数
+
         return x.view(N, g, int(C / g), H, W).permute(0, 2, 1, 3, 4).contiguous().view(N, C, H, W)
 
 
@@ -21,11 +21,11 @@ class Bottleneck(nn.Module):
         super(Bottleneck, self).__init__()
         self.stride = stride
 
-        # bottleneck层中间层的channel数变为输出channel数的1/4
+
         mid_planes = int(out_planes / 4)
 
         g = 1 if in_planes == 24 else groups
-        # 作者提到不在stage2的第一个pointwise层使用组卷积,因为输入channel数量太少,只有24
+
         self.conv1 = nn.Conv2d(in_planes, mid_planes,
                                kernel_size=1, groups=g, bias=False)
         self.bn1 = nn.BatchNorm2d(mid_planes)
